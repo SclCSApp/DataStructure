@@ -57,16 +57,15 @@ List mergeL(List L1,List L2)
 
 void print(List L)
 {
-    List t=L;
+    List t=L->next;
     if(L->next==NULL) cout<<"NULL";
     while(t)
     {
-        t=t->next;
-        if(t==NULL) break;
         if(t->next)
             cout<<t->data<<" ";
         if(t->next==NULL)
             cout<<t->data;
+        t=t->next;
     }
 
     return ;
@@ -81,14 +80,6 @@ int main()
     print(L3);
     return 0;
 }
-
-
-
-
-
-
-
-
 
 
 
